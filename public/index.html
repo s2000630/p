@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1>Web Portal</h1>
+      <p class="subtitle">Enter a website address or search query below</p>
+
+      <form id="portalForm" action="/go" method="GET" class="search-box">
+        <input
+          type="text"
+          id="urlInput"
+          name="url"
+          placeholder="Search or enter URL (e.g., wikipedia.org)"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <button type="submit">Go</button>
+      </form>
+
+      <div class="quick-links">
+        <span>Quick Links:</span>
+        <a href="/go?url=https%3A%2F%2Fhtml.duckduckgo.com%2Fhtml%2F">DuckDuckGo</a>
+        <a href="/go?url=https%3A%2F%2Fen.wikipedia.org%2F">Wikipedia</a>
+        <a href="/go?url=https%3A%2F%2Fnews.ycombinator.com%2F">Hacker News</a>
+        <a href="/go?url=https%3A%2F%2Fwww.bbc.com%2Fnews">BBC News</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
